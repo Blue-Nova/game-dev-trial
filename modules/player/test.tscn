@@ -2,4 +2,4 @@
 
 [node name="player" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="holy" type="Sprite2D" parent="."]
