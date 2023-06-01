@@ -1,0 +1,4 @@
+[gd_resource type="Theme" format=3 uid="uid://bx1gepfi2ej4f"]
+
+[resource]
+Panel/colors/test = Color(0.65098, 0.654902, 0.639216, 0.780392)
