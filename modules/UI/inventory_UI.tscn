@@ -1,9 +1,10 @@
 [gd_scene load_steps=5 format=3 uid="uid://bd68fk4k1in46"]
 
-[ext_resource type="Script" path="res://modules/world/inv_select.gd" id="1_3kutq"]
-[ext_resource type="Theme" uid="uid://bx1gepfi2ej4f" path="res://assets/themes/test_theme.tres" id="1_p5ovg"]
-[ext_resource type="Theme" uid="uid://b0woi5d085rqt" path="res://assets/themes/font_size.tres" id="2_dd2w2"]
+[ext_resource type="Script" path="res://modules/UI/inventory_UI.gd" id="1_asa1h"]
+[ext_resource type="PackedScene" uid="uid://b4lqruwdw7hyr" path="res://modules/UI/slot.tscn" id="2_iex7d"]
 [ext_resource type="Texture2D" uid="uid://7ypo4necbrj6" path="res://assets/art/tilesets/slot_selected.png" id="3_sult4"]
+
+[sub_resource type="GDScript" id="GDScript_37mdm"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -15,6 +16,7 @@ offset_bottom = -850.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.5, 0.5)
+script = ExtResource("1_asa1h")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -26,145 +28,60 @@ grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 alignment = 1
-script = ExtResource("1_3kutq")
+script = SubResource("GDScript_37mdm")
 
-[node name="slot" type="Panel" parent="HBoxContainer"]
+[node name="Slot1" type="PanelContainer" parent="HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_p5ovg")
+size_flags_vertical = 13
 
-[node name="item_texture" type="TextureRect" parent="HBoxContainer/slot"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
+[node name="Slot" parent="HBoxContainer/Slot1" instance=ExtResource("2_iex7d")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
-[node name="count" type="Label" parent="HBoxContainer/slot"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
-grow_horizontal = 0
-theme = ExtResource("2_dd2w2")
-horizontal_alignment = 1
+[node name="Slot2" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 13
 
-[node name="selected_texture" type="TextureRect" parent="HBoxContainer/slot"]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Slot" parent="HBoxContainer/Slot2" instance=ExtResource("2_iex7d")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Slot3" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 13
+
+[node name="Slot" parent="HBoxContainer/Slot3" instance=ExtResource("2_iex7d")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Slot4" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 13
+
+[node name="Slot" parent="HBoxContainer/Slot4" instance=ExtResource("2_iex7d")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Slot5" type="PanelContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 13
+
+[node name="Slot" parent="HBoxContainer/Slot5" instance=ExtResource("2_iex7d")]
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="selected_texture" type="TextureRect" parent="."]
+layout_mode = 2
+offset_right = 96.0
+offset_bottom = 100.0
 texture = ExtResource("3_sult4")
-
-[node name="slot2" type="Panel" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_p5ovg")
-
-[node name="item_texture" type="TextureRect" parent="HBoxContainer/slot2"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
-
-[node name="count" type="Label" parent="HBoxContainer/slot2"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
-grow_horizontal = 0
-theme = ExtResource("2_dd2w2")
-horizontal_alignment = 1
-
-[node name="slot3" type="Panel" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_p5ovg")
-
-[node name="item_texture" type="TextureRect" parent="HBoxContainer/slot3"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="count" type="Label" parent="HBoxContainer/slot3"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
-grow_horizontal = 0
-theme = ExtResource("2_dd2w2")
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="slot4" type="Panel" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_p5ovg")
-
-[node name="item_texture" type="TextureRect" parent="HBoxContainer/slot4"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="count" type="Label" parent="HBoxContainer/slot4"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
-grow_horizontal = 0
-theme = ExtResource("2_dd2w2")
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="slot5" type="Panel" parent="HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("1_p5ovg")
-
-[node name="item_texture" type="TextureRect" parent="HBoxContainer/slot5"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-expand_mode = 3
-metadata/_edit_use_anchors_ = true
-
-[node name="count" type="Label" parent="HBoxContainer/slot5"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -40.0
-offset_bottom = 23.0
-grow_horizontal = 0
-theme = ExtResource("2_dd2w2")
-horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true

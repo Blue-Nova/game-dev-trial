@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=5 format=3 uid="uid://cqprtgm62pek2"]
+
+[ext_resource type="Script" path="res://assets/scripts/inventory/inventory_data.gd" id="1_w3s0a"]
+[ext_resource type="Resource" uid="uid://ckfehxp7lkaau" path="res://assets/items/strawberry_seeds.tres" id="2_rvfxo"]
+[ext_resource type="Script" path="res://assets/scripts/inventory/slot_data.gd" id="3_mdhxi"]
+
+[sub_resource type="Resource" id="Resource_tp20v"]
+script = ExtResource("3_mdhxi")
+item_data = ExtResource("2_rvfxo")
+quantity = 8
+
+[resource]
+script = ExtResource("1_w3s0a")
+slot_datas = Array[ExtResource("3_mdhxi")]([SubResource("Resource_tp20v"), null, null, null, null, null, null])

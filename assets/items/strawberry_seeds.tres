@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://ckfehxp7lkaau"]
+
+[ext_resource type="Script" path="res://assets/scripts/inventory/item_data.gd" id="1_o0q14"]
+[ext_resource type="Texture2D" uid="uid://dnyj0qaheh2kp" path="res://assets/art/spritesheets/items_sprite_sheet.png" id="2_36rqr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi0ix"]
+atlas = ExtResource("2_36rqr")
+region = Rect2(0, 0, 16, 16)
+
+[resource]
+script = ExtResource("1_o0q14")
+name = "Strawberry Seeds"
+description = "Used to plant on hoed grass.
+Grows into Strawberries"
+stackable = true
+texture = SubResource("AtlasTexture_vi0ix")

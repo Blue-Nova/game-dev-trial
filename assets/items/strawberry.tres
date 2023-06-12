@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://by5kwh58kx8ef"]
+
+[ext_resource type="Script" path="res://assets/scripts/inventory/item_data.gd" id="1_5lsut"]
+[ext_resource type="Texture2D" uid="uid://dnyj0qaheh2kp" path="res://assets/art/spritesheets/items_sprite_sheet.png" id="2_adlkp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o7d86"]
+atlas = ExtResource("2_adlkp")
+region = Rect2(0, 16, 16, 16)
+
+[resource]
+script = ExtResource("1_5lsut")
+name = "Strawberry"
+description = "Very red and sweet! A refreshing summer taste."
+stackable = true
+texture = SubResource("AtlasTexture_o7d86")
