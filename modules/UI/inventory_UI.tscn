@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://6ydk3yq7hr2p"]
+[gd_scene load_steps=5 format=3 uid="uid://bd68fk4k1in46"]
 
-[ext_resource type="Script" path="res://inv_select.gd" id="1_addy7"]
+[ext_resource type="Script" path="res://modules/world/inv_select.gd" id="1_3kutq"]
 [ext_resource type="Theme" uid="uid://bx1gepfi2ej4f" path="res://assets/themes/test_theme.tres" id="1_p5ovg"]
 [ext_resource type="Theme" uid="uid://b0woi5d085rqt" path="res://assets/themes/font_size.tres" id="2_dd2w2"]
 [ext_resource type="Texture2D" uid="uid://7ypo4necbrj6" path="res://assets/art/tilesets/slot_selected.png" id="3_sult4"]
@@ -26,7 +26,7 @@ grow_vertical = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
 alignment = 1
-script = ExtResource("1_addy7")
+script = ExtResource("1_3kutq")
 
 [node name="slot" type="Panel" parent="HBoxContainer"]
 layout_mode = 2
@@ -51,7 +51,6 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 theme = ExtResource("2_dd2w2")
-text = "10"
 horizontal_alignment = 1
 
 [node name="selected_texture" type="TextureRect" parent="HBoxContainer/slot"]
@@ -87,7 +86,6 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 theme = ExtResource("2_dd2w2")
-text = "10"
 horizontal_alignment = 1
 
 [node name="slot3" type="Panel" parent="HBoxContainer"]
@@ -114,7 +112,6 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 theme = ExtResource("2_dd2w2")
-text = "10"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -142,7 +139,6 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 theme = ExtResource("2_dd2w2")
-text = "10"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
@@ -170,6 +166,5 @@ offset_left = -40.0
 offset_bottom = 23.0
 grow_horizontal = 0
 theme = ExtResource("2_dd2w2")
-text = "10"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true

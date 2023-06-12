@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bciygwc6efo7o"]
+
+[ext_resource type="Texture2D" uid="uid://crdogjmshx4tf" path="res://assets/art/tilesets/strawberry.png" id="1_vpex1"]
+[ext_resource type="Script" path="res://modules/plant/plant.gd" id="1_x1p4q"]
+
+[node name="plant" type="Sprite2D"]
+top_level = true
+texture = ExtResource("1_vpex1")
+hframes = 5
+script = ExtResource("1_x1p4q")
+
+[node name="grow_timer" type="Timer" parent="."]
+unique_name_in_owner = true
+autostart = true
+
+[connection signal="timeout" from="grow_timer" to="." method="_on_grow_timer_timeout"]
